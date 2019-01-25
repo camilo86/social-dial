@@ -1,3 +1,7 @@
 exports.getHome = (req, res) => {
-  return res.render('home/index');
+  return res.redirect('/login');
+};
+
+exports.getLogin = (req, res) => {
+  return res.render('home/login');
 };
