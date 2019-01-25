@@ -1,0 +1,24 @@
+{
+  "name": "social-dial",
+  "version": "0.1.0",
+  "description": "Phone your social status (twitter, fb) ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilo86/social-dial.git"
+  },
+  "keywords": [
+    "social",
+    "dial",
+    "phone"
+  ],
+  "author": "Camilo Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camilo86/social-dial/issues"
+  },
+  "homepage": "https://github.com/camilo86/social-dial#readme"
+}
