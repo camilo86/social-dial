@@ -5,3 +5,7 @@ exports.getHome = (req, res) => {
 exports.getLogin = (req, res) => {
   return res.render('home/login');
 };
+
+exports.getRegister = (req, res) => {
+  return res.render('home/register');
+};
