@@ -4,7 +4,7 @@
   "description": "Phone your social status (twitter, fb) ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "export $(cat .env | xargs) && node index.js"
   },
   "repository": {
     "type": "git",

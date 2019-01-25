@@ -1,6 +1,14 @@
 const path = require('path');
 const express = require('express');
 const helmet = require('helmet');
+const mongooose = require('mongoose');
+
+mongooose.connect(process.env.DB, error => {
+  if (error) {
+    console.error('Failed to connect to DB');
+    process.exit(1);
+  }
+});
 
 const Home = require('./home');
 
