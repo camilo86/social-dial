@@ -11,6 +11,8 @@ block body
         img.mb-4(src='static/call-answer.svg', alt='Phone', width='72', height='72')
       h1.h3.mb-3.font-weight-normal Lets create your account
 
+    include ../flash-messages.pug
+
     label.sr-only(for='inputName') Name
     input#inputName.form-control.start-group(type='text', name='name', placeholder='Name', required='', autofocus='')
     label.sr-only(for='inputPhone') Phone

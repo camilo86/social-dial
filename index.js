@@ -1,6 +1,9 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('express-flash');
 const helmet = require('helmet');
 const mongooose = require('mongoose');
 
@@ -14,7 +17,11 @@ mongooose.connect(process.env.DB, { useNewUrlParser: true }, error => {
 const Home = require('./home');
 
 const app = express();
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(session({ secret: process.env.SESSION_SECRET }));
+app.use(flash());
 app.set('view engine', 'pug');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
