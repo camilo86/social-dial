@@ -25,6 +25,15 @@ exports.postRegister = async (req, res) => {
     return res.render('home/register');
   }
 
+  const isEmailOrPhoneTaken = await Account.findOne().or(
+    [ { email: req.body.email }, { phone: req.body.phone } ]
+  );
+
+  if (isEmailOrPhoneTaken) {
+    // Todo: Send flash message with account taken message
+    return res.render('home/register');
+  }
+
   const account = new Account({ ...req.body });
   await account.save();
 
